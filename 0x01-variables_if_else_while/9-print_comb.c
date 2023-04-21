@@ -1,20 +1,22 @@
 #include <stdio.h>
 /**
- * main - Printing all possible combination of single digits number
+ * main - Prints all combinations of single numbers
  * Return: Always 0
  */
 int main(void)
 {
-	int n;
+	int i = '0';
 
-	for (n = 48; n < 58; n++)
+	while (i <= '9')
 	{
-		putchar(n);
-		if (n != 57)
+		putchar(i);
+		if (i != '9')
 		{
 			putchar(',');
 			putchar(' ');
 		}
+		++i;
+	}
 	putchar('\n');
 	return (0);
 }
