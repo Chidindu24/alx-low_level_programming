@@ -2,7 +2,7 @@
 /**
  * main - finds and prints the sum of the even-valued terms
  * followed by a new line
- * REturn: Always 0
+ * Return: Always 0
  */
 int main(void)
 {
