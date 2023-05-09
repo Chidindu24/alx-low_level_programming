@@ -7,18 +7,26 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int index, sum1 = 0, sum2 = 0;
+	int i, sum, sizer;
 
-	for (index = 0; index < size; index++)
+	i = 0;
+	sum = 0;
+	sizer = size * size;
+	while (i < sizer)
 	{
-		sum1 += a[index];
-		a += size;
+		if (i % (size + 1) == 0)
+			sum += a[i];
+		i++;
 	}
-	a -= size;
-	for (index = 0; index < size; index++)
+	printf("%d, ", sum);
+
+	sum = 0;
+	i = 0;
+	while (i < sizer)
 	{
-		sum2 += a[index];
-		a -= size;
+		if (i % (size - 1) == 0 && i != (sizer - 1) && i != 0)
+			sum += a[i];
+		i++;
 	}
-	printf("%d,%d/n", sum1, sum2);
+	printf("%d\n", sum);
 }
